@@ -21,7 +21,7 @@ public class HangMan {
             return "\n+====+\r\n O   |\r\n-|-  |\r\n/    |\r\n    ===";
 
         case 6:
-            return "\n+====+\r\n O   |\r\n-|-  |\r\n/\\   |\r\n    ===";
+            return "\n+====+\r\n O   |\r\n-|-  |\r\n/ \\  |\r\n    ===";
 
         default:
             return "\n+====+\r\n     |\r\n     |\r\n     |\r\n    ===";
