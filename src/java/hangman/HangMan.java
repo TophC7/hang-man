@@ -6,25 +6,25 @@ public class HangMan {
 
         switch (triesCount) {
         case 1:
-            return "Head";
+            return "+====+\r\n O   |\r\n     |\r\n     |\r\n    ===";
 
         case 2:
-            return "torso";
+            return "+====+\r\n O   |\r\n |   |\r\n     |\r\n    ===";
 
         case 3:
-            return "left arm";
+            return "+====+\r\n O   |\r\n-|   |\r\n     |\r\n    ===";
 
         case 4:
-            return "rigth arm";
+            return "+====+\r\n O   |\r\n-|-  |\r\n     |\r\n    ===";
 
         case 5:
-            return "left leg";
+            return "+====+\r\n O   |\r\n-|-  |\r\n/    |\r\n    ===";
 
         case 6:
-            return "right leg";
+            return "+====+\r\n O   |\r\n-|-  |\r\n/\\   |\r\n    ===";
 
         default:
-            return "Default";
+            return "+====+\r\n     |\r\n     |\r\n     |\r\n    ===";
         }
     }
 
