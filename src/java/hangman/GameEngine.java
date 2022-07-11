@@ -15,6 +15,9 @@ public class GameEngine {
 
     public void play() {
 
+        System.out.println(
+                "  _    _          _   _  _____ __  __          _   _ \r\n | |  | |   /\\   | \\ | |/ ____|  \\/  |   /\\   | \\ | |\r\n | |__| |  /  \\  |  \\| | |  __| \\  / |  /  \\  |  \\| |\r\n |  __  | / /\\ \\ | . ` | | |_ | |\\/| | / /\\ \\ | . ` |\r\n | |  | |/ ____ \\| |\\  | |__| | |  | |/ ____ \\| |\\  |\r\n |_|  |_/_/    \\_|_| \\_|\\_____|_|  |_/_/    \\_|_| \\_|\n");
+
         Player player; // needs to reset when play again so we initialize inside loop
         HangMan hangman = new HangMan(); // we never need to reset this one so it can stay out of loop
 
@@ -29,7 +32,6 @@ public class GameEngine {
             String wordState = "";
 
             List<String> wordAsList = new ArrayList<>(Arrays.asList(words.get(rngIndex).split("")));
-            System.out.println(word);
             Set<String> guessed = new HashSet<>();
             Set<String> missedLetters = new HashSet<>();
 
@@ -67,9 +69,10 @@ public class GameEngine {
     private void displayGameState(Player player, HangMan hangman, String wordState, Set<String> missedLetters) {
 
         System.out.println(hangman.getState(player.getFails()));
+        System.out.println("Word: " + wordState);
         System.out.println("Missed letters: " + missedLetters.toString().replaceAll("[\\s\\[\\]\\,]", " "));
-        System.out.println(wordState);
-        System.out.println("Take a Guess:");
+
+        System.out.print("Take a Guess: ");
 
     }
 
@@ -94,7 +97,7 @@ public class GameEngine {
 
             if (player.getFails() >= TRIES) {
                 System.out.println(hangMan.getState(6)); // returns hanged man
-                System.out.println("Out of tries little man got hanged! Better luck next time.");
+                System.out.println("Out of tries little man got hanged! Better luck next time. The word was " + word);
                 return false;
 
             } else {
