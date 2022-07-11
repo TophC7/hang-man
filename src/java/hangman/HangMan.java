@@ -2,9 +2,15 @@ package hangman;
 
 public class HangMan {
 
-    public String getState(int triesCount) {
+    /**
+     * This function returns the state of the hangman according to the players fails.
+     * 
+     * @param fails - how many times the player has failed
+     * @return the correct state of the hangman acording to the fails
+     */
+    public String getState(int fails) {
 
-        switch (triesCount) {
+        switch (fails) {
         case 1:
             return "\n+====+\r\n O   |\r\n     |\r\n     |\r\n    ===";
 
